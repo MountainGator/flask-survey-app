@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satisfaction Survey</title>
+</head>
+<body>
+    <div id="container">
+        <form action="/thank-you" method="post">
+            {% for q in survey.questions %}
+            <div>
+                <p>{{q.question}}</p>
+                {% for choice in q.choices %}
+                    <label></label>
+                    <input name="">
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </form>
+    </div>
+</body>
+</html>
