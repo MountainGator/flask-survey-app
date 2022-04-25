@@ -8,16 +8,18 @@
 </head>
 <body>
     <div id="container">
-        <form action="/thank-you" method="post">
+        <form action="/survey/thank-you" method="post">
             {% for q in survey.questions %}
-            <div>
-                <p>{{q.question}}</p>
+            <div class="mb-2">
+                <div class="form-text">{{q.question}}</div>
                 {% for choice in q.choices %}
                     <label>{{choice}}</label>
-                    <input name="">
+                    <input name={{choice}} type="checkbox">
                 {% endfor %}
             </div>
+            
             {% endfor %}
+            <button type="submit">Submit</button>
         </form>
     </div>
 </body>
